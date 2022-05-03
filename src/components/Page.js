@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import ReactMarkdown from "react-markdown/with-html";
+import ReactMarkdown from "react-markdown";
 import { useMarkdown } from "../hooks/useMarkdown";
+import rehypeRaw from 'rehype-raw'
 
 const TITLE = "smiths.solutions";
 
@@ -12,7 +13,7 @@ const Page = ({ slug, title }) => {
   }, [slug, title]);
 
   if (!markdown && !loading) return <Page slug={"lost"} title="404" />;
-  return <ReactMarkdown source={markdown} escapeHtml={false} />;
+  return <ReactMarkdown children={markdown} rehypePlugins={[rehypeRaw]} />;
 };
 
 export default Page;

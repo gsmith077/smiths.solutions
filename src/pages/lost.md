@@ -1,5 +1,5 @@
-## Oops, all shell crumbs.
+## Bad route bro
 
-The hard taco you're looking for seems to have already been eaten.
+Looks like you are looking for something that doesn't exist.
 
-Head on back to the home page to find something tasty.
+FOR SHAME.

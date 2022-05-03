@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Bottom from "./components/bottom";
 import Page from "./components/Page";
 import Top from "./components/top";
@@ -10,17 +10,24 @@ function App() {
       <div id="main">
         <Top />
         <div id="index">
-          <Switch>
-            <Route exact path="/">
-              <Page slug={"index"} title="Homepage" />
-            </Route>
-            <Route path="/:slug">
-              {({ match: { params } }) => <Page slug={params.slug} />}
-            </Route>
-            <Route path="/">
-              <Page slug={"lost"} title="404" />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={<Page slug={"index"} title="Homepage" />}
+            />
+            
+            <Route
+              path="/:slug"
+              element={({ match: { params } }) => <Page slug={params.slug} />}
+            />
+
+            {/* <Route
+              path="/"
+              element={<Page slug={"lost"} title="404" />}
+            /> */}
+
+          </Routes>
         </div>
         <Bottom />
       </div>
