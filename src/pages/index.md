@@ -1,5 +1,15 @@
 ## Homepage
 
+Meet some pyscript:
+
+<py-script>
+  name = "General Kenobi"
+  print(f"Hello There: {name}")
+  tester = [{"name": "Alice", "age": 1},{"name": "Bob", "age": 2},{"name": "Charlie", "age": 3}]
+  names = [person["name"] for person in tester]
+  print(names)
+</py-script>
+
 what do you want here, `a novel`?
 
 ```
